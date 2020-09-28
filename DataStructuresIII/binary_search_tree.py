@@ -1,7 +1,7 @@
 """
-Binary search trees are a data structure that enforce an ordering over 
-the data they store. That ordering in turn makes it a lot more efficient 
-at searching for a particular piece of data in the tree. 
+Binary search trees are a data structure that enforce an ordering over
+the data they store. That ordering in turn makes it a lot more efficient
+at searching for a particular piece of data in the tree.
 This part of the project comprises two days:
 1. Implement the methods `insert`, `contains`, `get_max`, and `for_each`
    on the BSTNode class.
@@ -31,7 +31,7 @@ class BSTNode:
             # otherwise call insert on the left node
             else:
                 self.left.insert(value)
-        # otherwise (the new nodes value is greaterthan or equal to the current node value)
+        # otherwise (the new nodes value is greater than or equal to the current node value)
         else:
             # if there is no right child already here
             if not self.right:
@@ -100,7 +100,7 @@ class BSTNode:
                 max_value = current_node.value
             # move on to the next right node
             current_node = current_node.right
-        
+
         # return the max value
         return max_value
 
@@ -112,7 +112,7 @@ class BSTNode:
         if self.left:
             # call the function on the left value
             self.left.for_each(fn)
-        
+
         # if there is a node to the right
         if self.right:
             # call the function on the right node
@@ -126,10 +126,10 @@ class BSTNode:
         # base case
         # if there are no more nodes
             # return
-        
+
         # if there is a node to the left
             # call in order print on the left
-        
+
         # print the value of the current node (self.value)
 
         # if there is a node to the right
@@ -144,12 +144,12 @@ class BSTNode:
 
         # while there is data on the queue
             # dequeu from queue on to current_node
-            
+
             # print the current_node's value
 
             # if the current_node has a left child
                 # enqueue the left child
-            
+
             # if the current_node has a right child
                 # enqueue the right child
         pass
@@ -192,4 +192,4 @@ bst.pre_order_dft()
 print("in order")
 # bst.in_order_dft()
 print("post order")
-bst.post_order_dft() 
+bst.post_order_dft()
